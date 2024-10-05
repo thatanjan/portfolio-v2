@@ -386,7 +386,7 @@ const Page = () => {
                     ></iframe>
                   </div>
                   <div className='p-4'>
-                    <h3 className='text-xl font-semibold text-gray-100'>
+                    <h3 className='text-md  text-gray-300 line-clamp-2'>
                       {video.title}
                     </h3>
                   </div>
