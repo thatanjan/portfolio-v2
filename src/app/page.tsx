@@ -19,6 +19,8 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
+import hero_background from '@/assets/hero_background.jpg'
+
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -197,13 +199,13 @@ const Page = () => {
         >
           <div className='absolute inset-0 z-0'>
             <Image
-              src='/placeholder.svg?height=1080&width=1920'
+              src={hero_background}
               alt='Hero Background'
               layout='fill'
               objectFit='cover'
               priority
             />
-            <div className='absolute inset-0 bg-black opacity-70 z-10'></div>
+            <div className='absolute inset-0 bg-black opacity-50 z-10'></div>
           </div>
           <div className='relative z-20 text-center text-gray-100 px-4'>
             <h2 className='text-5xl font-bold mb-4'>Anjan Shomodder</h2>
