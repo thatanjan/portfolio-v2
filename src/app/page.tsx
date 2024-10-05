@@ -110,7 +110,7 @@ const Page = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 font-['Fira_Code']">
-      <header className='bg-gray-800 bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-20'>
+      <header className='font-bold bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-20'>
         <div className='container mx-auto px-4 py-4 flex justify-between items-center'>
           <h1 className='text-2xl font-bold text-gray-100'>Anjan Shomodder</h1>
           <nav className='hidden md:flex space-x-4'>
@@ -210,7 +210,7 @@ const Page = () => {
           <div className='relative z-20 text-center text-gray-100 px-4'>
             <h2 className='text-5xl font-bold mb-4'>Anjan Shomodder</h2>
             <p className='text-xl mb-8'>
-              Full Stack Developer | Creating innovative web solutions
+              Full Stack Developer | YouTuber | Tech Enthusiast
             </p>
             <button
               onClick={() => scrollToSection(workRef)}
@@ -229,30 +229,22 @@ const Page = () => {
             <h2 className='text-4xl font-bold mb-8 text-center text-gray-100'>
               Work Experience
             </h2>
-            <div className='space-y-8'>
+            <div className='space-y-8 grid lg:grid-cols-2 grid-cols-1 gap-2'>
               <div className='bg-gray-700 p-6 rounded-lg shadow-md'>
                 <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
-                  Senior Full Stack Developer
+                  Frontend Developer
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  TechCorp Inc. | 2019 - Present
-                </p>
-                <p className='text-gray-400'>
-                  Led development of scalable web applications using React,
-                  Node.js, and AWS.
-                </p>
-              </div>
-              <div className='bg-gray-700 p-6 rounded-lg shadow-md'>
-                <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
-                  Full Stack Developer
-                </h3>
-                <p className='text-gray-300 mb-4'>
-                  WebSolutions Co. | 2016 - 2019
-                </p>
-                <p className='text-gray-400'>
-                  Developed and maintained client websites and internal tools
-                  using MERN stack.
-                </p>
+                <p className='text-gray-300 mb-4'>Droppe | 2022 - 2024</p>
+                <ul className='list-none text-gray-400'>
+                  <li>
+                    Developed features like Request for quote and Sample request
+                    helping increase sales.
+                  </li>
+                  <li>
+                    Migrated an entire blogging website from Javascript to
+                    Typescript.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
