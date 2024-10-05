@@ -95,17 +95,58 @@ const Page = () => {
 
   const youtubeVideos = [
     {
-      title: 'Introduction to React Hooks',
-      videoId: 'dpw9EHDh2bM',
+      title:
+        'Translate website content using Next.js internationalization and next-i18next',
+      videoId: 'H9O9HdKNytc',
     },
     {
-      title: 'Building a REST API with Node.js and Express',
-      videoId: 'pKd0Rpw7O48',
+      title:
+        'Next Auth Basics tutorial | Add Google, GitHub, Twitter, and Email authentication in Next.js project',
+      videoId: 'tgrvKGPmI04',
     },
     {
-      title: 'Mastering CSS Grid Layout',
-      videoId: 'jV8B24rSN5o',
+      title:
+        'Material UI crash course with Next.js 2023 | React UI Framework | V5',
+      videoId: '3quQ6KNGUh0',
     },
+    {
+      title: 'Mantine UI crash course with NEXT.JS | React UI Framework',
+      videoId: 'U9MaICpcNRI',
+    },
+    {
+      title: 'Chakra UI crash course | React UI Framework',
+      videoId: 'hJ873mLhmFQ',
+    },
+    {
+      title:
+        'How to setup and deploy fullstack(MERN) application on Vercel and Render',
+      videoId: 'ME3tMy5Q2qo',
+    },
+    {
+      title:
+        'NEXT UI crash course with NEXT.JS | Tailwind CSS | React UI Framework',
+      videoId: '4f-tAcsSv54',
+    },
+    {
+      title:
+        'Auth0 basics with Next.JS | Add Google, GitHub, and Email authentication in Next.js project | React',
+      videoId: 'PoTUX9_3LaQ',
+    },
+    {
+      title:
+        '1. Introduction to Firebase Firestore with Nextjs 14 | Server Component | Server Action | React',
+      videoId: 'PoTUX9_3LaQ',
+    },
+    {
+      title:
+        'Setup NextJs 14 with MongoDB and Mongoose | React | instrumentation',
+      videoId: 'tFp4UhfDoQU',
+    },
+    // Template for the future
+    // {
+    //   title: '',
+    //   videoId: '',
+    // },
   ]
 
   return (
@@ -323,7 +364,7 @@ const Page = () => {
         >
           <div className='container mx-auto px-4 py-16'>
             <h2 className='text-4xl font-bold mb-8 text-center text-gray-100'>
-              YouTube Tutorials
+              My YouTube Tutorials
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {youtubeVideos.map((video, index) => (
@@ -335,6 +376,7 @@ const Page = () => {
                     className='relative w-full'
                     style={{ paddingBottom: '56.25%' }}
                   >
+                    {console.log(video.videoId)}
                     <iframe
                       src={`https://www.youtube.com/embed/${video.videoId}`}
                       title={video.title}
