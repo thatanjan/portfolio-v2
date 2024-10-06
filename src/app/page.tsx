@@ -19,7 +19,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
-import hero_background from '@/assets/hero_background.jpg'
+import hero_background from '@/../public/hero_background.jpg'
 
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
