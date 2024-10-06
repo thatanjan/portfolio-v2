@@ -7,7 +7,7 @@ interface Project {
   screenshots: string[]
   liveDemo: string
   sourceCode: string
-  technologies?: string[]
+  technologies: string[]
 }
 
 const projects: Project[] = [
