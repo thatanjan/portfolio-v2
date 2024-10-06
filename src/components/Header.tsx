@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className='font-bold bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-20'>
+    <header className='font-bold bg-opacity-90 shadow-md fixed top-0 left-0 right-0 z-20 bg-gray-900'>
       <div className='container mx-auto px-4 py-4 flex justify-between items-center'>
         <h1 className='text-2xl font-bold text-gray-100'>Anjan Shomodder</h1>
         <nav className='hidden md:flex space-x-4'>

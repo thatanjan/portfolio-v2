@@ -170,30 +170,33 @@ const Page = () => {
             </p>
             <div className='flex justify-center space-x-4'>
               <a
-                href='https://github.com/anjanshomodder'
+                href='https://github.com/thatanjan'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
                 aria-label='GitHub'
+                target='_blank'
               >
                 <Github size={24} />
               </a>
               <a
-                href='https://linkedin.com/in/anjanshomodder'
+                href='https://linkedin.com/in/thatanjan'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
                 aria-label='LinkedIn'
+                target='_blank'
               >
                 <Linkedin size={24} />
               </a>
               <a
-                href='mailto:anjan@example.com'
+                href='mailto:thatanjan@gmail.com'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
                 aria-label='Email'
               >
                 <Mail size={24} />
               </a>
               <a
-                href='https://youtube.com/@anjanshomodder'
+                href='https://youtube.com/@culesCoding'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
                 aria-label='YouTube'
+                target='_blank'
               >
                 <Youtube size={24} />
               </a>
