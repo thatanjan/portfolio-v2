@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, RefObject } from 'react'
+import { useState } from 'react'
 import {
   Menu,
   X,
@@ -23,20 +23,6 @@ import hero_background from '@/assets/hero_background.jpg'
 
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  // useRef<HTMLSelectElement>
-  const aboutRef = useRef<HTMLDivElement>(null)
-  const workRef = useRef<HTMLDivElement>(null)
-  const projectsRef = useRef<HTMLDivElement>(null)
-  const youtubeRef = useRef<HTMLDivElement>(null)
-  const contactRef = useRef<HTMLDivElement>(null)
-
-  const scrollToSection = (ref: RefObject<HTMLDivElement>) => {
-    setIsMenuOpen(false)
-
-    if (!ref.current) return
-    ref.current.scrollIntoView({ behavior: 'smooth' })
-  }
 
   const projects = [
     {
@@ -142,11 +128,6 @@ const Page = () => {
         'Setup NextJs 14 with MongoDB and Mongoose | React | instrumentation',
       videoId: 'tFp4UhfDoQU',
     },
-    // Template for the future
-    // {
-    //   title: '',
-    //   videoId: '',
-    // },
   ]
 
   return (
@@ -155,40 +136,26 @@ const Page = () => {
         <div className='container mx-auto px-4 py-4 flex justify-between items-center'>
           <h1 className='text-2xl font-bold text-gray-100'>Anjan Shomodder</h1>
           <nav className='hidden md:flex space-x-4'>
-            <button
-              onClick={() => scrollToSection(aboutRef)}
-              className='text-gray-300 hover:text-gray-100'
-            >
+            <a href='#about' className='text-gray-300 hover:text-gray-100'>
               About
-            </button>
-            <button
-              onClick={() => scrollToSection(workRef)}
-              className='text-gray-300 hover:text-gray-100'
-            >
+            </a>
+            <a href='#work' className='text-gray-300 hover:text-gray-100'>
               Work
-            </button>
-            <button
-              onClick={() => scrollToSection(projectsRef)}
-              className='text-gray-300 hover:text-gray-100'
-            >
+            </a>
+            <a href='#projects' className='text-gray-300 hover:text-gray-100'>
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection(youtubeRef)}
-              className='text-gray-300 hover:text-gray-100'
-            >
+            </a>
+            <a href='#youtube' className='text-gray-300 hover:text-gray-100'>
               YouTube
-            </button>
-            <button
-              onClick={() => scrollToSection(contactRef)}
-              className='text-gray-300 hover:text-gray-100'
-            >
+            </a>
+            <a href='#contact' className='text-gray-300 hover:text-gray-100'>
               Contact
-            </button>
+            </a>
           </nav>
           <button
             className='md:hidden'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {isMenuOpen ? (
               <X className='text-gray-100' />
@@ -199,43 +166,43 @@ const Page = () => {
         </div>
         {isMenuOpen && (
           <div className='md:hidden bg-gray-800 px-4 py-2'>
-            <button
-              onClick={() => scrollToSection(aboutRef)}
+            <a
+              href='#about'
               className='block py-2 text-gray-300 hover:text-gray-100'
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection(workRef)}
+            </a>
+            <a
+              href='#work'
               className='block py-2 text-gray-300 hover:text-gray-100'
             >
               Work
-            </button>
-            <button
-              onClick={() => scrollToSection(projectsRef)}
+            </a>
+            <a
+              href='#projects'
               className='block py-2 text-gray-300 hover:text-gray-100'
             >
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection(youtubeRef)}
+            </a>
+            <a
+              href='#youtube'
               className='block py-2 text-gray-300 hover:text-gray-100'
             >
               YouTube
-            </button>
-            <button
-              onClick={() => scrollToSection(contactRef)}
+            </a>
+            <a
+              href='#contact'
               className='block py-2 text-gray-300 hover:text-gray-100'
             >
               Contact
-            </button>
+            </a>
           </div>
         )}
       </header>
 
-      <main className='snap-y snap-mandatory h-screen overflow-y-scroll'>
+      <main className='snap-y snap-mandatory h-screen overflow-y-scroll scroll-pt-16'>
         <section
-          ref={aboutRef}
+          id='about'
           className='relative h-screen w-full flex items-center justify-center snap-start'
         >
           <div className='absolute inset-0 z-0'>
@@ -253,17 +220,17 @@ const Page = () => {
             <p className='text-xl mb-8'>
               Full Stack Developer | YouTuber | Tech Enthusiast
             </p>
-            <button
-              onClick={() => scrollToSection(workRef)}
+            <a
+              href='#work'
               className='bg-blue-600 text-gray-100 px-6 py-3 rounded-full inline-flex items-center hover:bg-blue-700 transition duration-300'
             >
               Explore My Work <ChevronDown className='ml-2' />
-            </button>
+            </a>
           </div>
         </section>
 
         <section
-          ref={workRef}
+          id='work'
           className='min-h-screen flex items-center justify-center bg-gray-800 snap-start'
         >
           <div className='container mx-auto px-4 py-16'>
@@ -292,7 +259,7 @@ const Page = () => {
         </section>
 
         <section
-          ref={projectsRef}
+          id='projects'
           className='min-h-screen flex items-center justify-center bg-gray-900 snap-start'
         >
           <div className='container mx-auto px-4 py-16'>
@@ -359,7 +326,7 @@ const Page = () => {
         </section>
 
         <section
-          ref={youtubeRef}
+          id='youtube'
           className='min-h-screen flex items-center justify-center bg-gray-800 snap-start'
         >
           <div className='container mx-auto px-4 py-16'>
@@ -376,7 +343,6 @@ const Page = () => {
                     className='relative w-full'
                     style={{ paddingBottom: '56.25%' }}
                   >
-                    {console.log(video.videoId)}
                     <iframe
                       src={`https://www.youtube.com/embed/${video.videoId}`}
                       title={video.title}
@@ -397,7 +363,7 @@ const Page = () => {
         </section>
 
         <section
-          ref={contactRef}
+          id='contact'
           className='min-h-screen flex items-center justify-center bg-gray-900 snap-start'
         >
           <div className='container mx-auto px-4 py-16 text-center'>
@@ -411,24 +377,28 @@ const Page = () => {
               <a
                 href='https://github.com/anjanshomodder'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
+                aria-label='GitHub'
               >
                 <Github size={24} />
               </a>
               <a
                 href='https://linkedin.com/in/anjanshomodder'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
+                aria-label='LinkedIn'
               >
                 <Linkedin size={24} />
               </a>
               <a
                 href='mailto:anjan@example.com'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
+                aria-label='Email'
               >
                 <Mail size={24} />
               </a>
               <a
                 href='https://youtube.com/@anjanshomodder'
                 className='text-gray-400 hover:text-gray-100 transition duration-300'
+                aria-label='YouTube'
               >
                 <Youtube size={24} />
               </a>
