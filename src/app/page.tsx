@@ -97,7 +97,7 @@ const Page = () => {
             <h2 className='text-4xl font-bold mb-8 text-center text-gray-100'>
               Work Experience
             </h2>
-            <div className='space-y-8 grid lg:grid-cols-2 grid-cols-1 gap-2'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-2'>
               <div className='bg-gray-700 p-6 rounded-lg shadow-md'>
                 <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
                   Frontend Developer
@@ -113,6 +113,32 @@ const Page = () => {
                     Typescript.
                   </li>
                 </ul>
+              </div>
+              <div className='bg-gray-700 p-6 rounded-lg shadow-md flex flex-col'>
+                <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
+                  Want to hire me?
+                </h3>
+                <p className='text-gray-300 mb-4'>
+                  I am available for full-time or freelance work. Let&apos;s
+                  talk!
+                </p>
+                <div className='flex space-x-4 basis-full items-end'>
+                  <a
+                    href='#contact'
+                    rel='noopener noreferrer'
+                    className='bg-blue-600 text-gray-100 px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300'
+                  >
+                    Hire me
+                  </a>
+                  <a
+                    href='https://drive.google.com/file/d/1i7_4pUGFKfhDTlIs5UQoZhQcZ6LatRvd/view?usp=sharing'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='border border-gray-400 text-gray-100 px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300'
+                  >
+                    Resume
+                  </a>
+                </div>
               </div>
             </div>
           </div>
