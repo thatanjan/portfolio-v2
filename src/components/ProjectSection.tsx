@@ -43,12 +43,14 @@ const ProjectSection = () => {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
-              <div className='p-6'>
-                <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
+              <div className='p-6 '>
+                <h3 className='text-2xl line-clamp-2 font-semibold mb-2 text-gray-100'>
                   {project.title}
                 </h3>
-                <p className='mb-4 text-gray-400'>{project.description}</p>
-                <p className='mb-4 text-gray-300'>
+                <p className='mb-4 text-gray-400 line-clamp-2'>
+                  {project.description}
+                </p>
+                <p className='mb-4 text-gray-300 line-clamp-2'>
                   <span className='font-semibold'>Technologies:</span>{' '}
                   {project.technologies.join(', ')}
                 </p>
