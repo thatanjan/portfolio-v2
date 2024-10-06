@@ -1,7 +1,7 @@
 // use only in server components
 import { getScreenshotsPath } from '@/lib/serverUtils'
 
-interface Project {
+export interface Project {
   title: string
   description: string
   screenshots: string[]
