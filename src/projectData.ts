@@ -38,6 +38,15 @@ const projects: Project[] = [
       'Material-UI',
     ],
   },
+  {
+    title: 'SpaceX Landing Page Clone',
+    description:
+      'A clone of the SpaceX landing page, made with HTML, CSS, and JavaScript.',
+    screenshots: [],
+    liveDemo: 'https://thatanjan.github.io/spaceX-landing-page-clone-yt/',
+    sourceCode: 'https://github.com/thatanjan/spaceX-landing-page-clone-yt',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+  },
 ]
 
 projects.forEach(project => {
