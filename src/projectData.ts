@@ -97,7 +97,6 @@ const projects: Project[] = [
 ]
 
 projects.forEach(project => {
-  console.log(project.title)
   project.screenshots = getScreenshotsPath(project.title)
 })
 
