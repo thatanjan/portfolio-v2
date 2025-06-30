@@ -38,7 +38,7 @@ const ProjectCard = (props: Project) => {
                   src={image}
                   alt={`${title} screenshot ${imageIndex + 1}`}
                   layout='fill'
-                  objectFit='cover'
+                  objectFit='contain'
                   className='rounded-t-lg'
                 />
               </div>
