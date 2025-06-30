@@ -1,15 +1,14 @@
 'use client'
+import { Project } from '@/projectData'
 import Autoplay from 'embla-carousel-autoplay'
-import React from 'react'
+import Image from 'next/image'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 } from './ui/carousel'
-import Image from 'next/image'
-import { Project } from '@/projectData'
 
 const ProjectCard = (props: Project) => {
   const {
@@ -67,14 +66,16 @@ const ProjectCard = (props: Project) => {
           >
             Live Demo
           </a>
-          <a
-            href={sourceCode}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='border border-gray-400 text-gray-100 px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300'
-          >
-            Source Code
-          </a>
+          {sourceCode && (
+            <a
+              href={sourceCode}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='border border-gray-400 text-gray-100 px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300'
+            >
+              Source Code
+            </a>
+          )}
         </div>
       </div>
     </div>
