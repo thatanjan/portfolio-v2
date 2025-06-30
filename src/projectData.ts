@@ -11,6 +11,23 @@ export interface Project {
 }
 
 const projects: Project[] = [
+
+  {
+    title: 'Deshly',
+    description:
+      'Deshly is a blogging platform where people can share their thoughts and ideas with the world.',
+    screenshots: [],
+    liveDemo: 'https://deshly-staging.thatanjan.com/',
+    sourceCode: '',
+    technologies: [
+      'React',
+      'Next.js',
+      'Supabase',
+      'TypeScript',
+      'Tailwind CSS',
+      'Shadcn UI',
+    ],
+  },
   {
     title: 'Cules Coding',
     description:
