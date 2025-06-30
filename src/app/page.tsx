@@ -59,21 +59,22 @@ const Page = () => {
 
   const workExperience = [
     {
+      title: 'Full Stack Developer',
+      company: 'Deshly',
+      duration: '2025',
+      responsibilities: [
+        'Architected and developed a full-stack e-commerce platform using Next.js and Supabase',
+        'Integrated Stripe for secure payment processing and managed digital product delivery.',
+        'Implemented user authentication with Supabase, a custom dashboard, and deployed on Vercel.',
+      ],
+    },
+    {
       title: 'Frontend Developer',
       company: 'Droppe',
       duration: '2022 - 2024',
       responsibilities: [
         'Developed features like Request for quote and Sample request helping increase sales.',
         'Migrated an entire blogging website from Javascript to Typescript.',
-      ],
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'Deshly',
-      duration: '2025',
-      responsibilities: [
-        'Building and maintaining web applications using Next.js and Node.js.',
-        'Implementing RESTful APIs and integrating with third-party services.',
       ],
     },
   ]
