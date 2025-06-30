@@ -9,6 +9,11 @@ const Page = () => {
   const youtubeVideos = [
     {
       title:
+        'How to add Google OAuth in Nextjs with Supabase | Server Component | Server Action | Google Login',
+      videoId: 'XgqCh2FwNVY',
+    },
+    {
+      title:
         'Translate website content using Next.js internationalization and next-i18next',
       videoId: 'H9O9HdKNytc',
     },
@@ -57,6 +62,28 @@ const Page = () => {
     },
   ]
 
+  const workExperience = [
+    {
+      title: 'Full Stack Developer',
+      company: 'Deshly',
+      duration: '2025',
+      responsibilities: [
+        'Architected and developed a full-stack e-commerce platform using Next.js and Supabase',
+        'Integrated Stripe for secure payment processing and managed digital product delivery.',
+        'Implemented user authentication with Supabase, a custom dashboard, and deployed on Vercel.',
+      ],
+    },
+    {
+      title: 'Frontend Developer',
+      company: 'Droppe',
+      duration: '2022 - 2024',
+      responsibilities: [
+        'Developed features like Request for quote and Sample request helping increase sales.',
+        'Migrated an entire blogging website from Javascript to Typescript.',
+      ],
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 font-['Fira_Code']">
       <Header />
@@ -98,22 +125,25 @@ const Page = () => {
               Work Experience
             </h2>
             <div className='grid lg:grid-cols-2 grid-cols-1 gap-2'>
-              <div className='bg-gray-700 p-6 rounded-lg shadow-md'>
-                <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
-                  Frontend Developer
-                </h3>
-                <p className='text-gray-300 mb-4'>Droppe | 2022 - 2024</p>
-                <ul className='list-none text-gray-400'>
-                  <li>
-                    Developed features like Request for quote and Sample request
-                    helping increase sales.
-                  </li>
-                  <li>
-                    Migrated an entire blogging website from Javascript to
-                    Typescript.
-                  </li>
-                </ul>
-              </div>
+              {workExperience.map((job, index) => (
+                <div
+                  key={index}
+                  className='bg-gray-700 p-6 rounded-lg shadow-md'
+                >
+                  <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
+                    {job.title}
+                  </h3>
+                  <p className='text-gray-300 mb-4'>
+                    {job.company} | {job.duration}
+                  </p>
+                  <ul className='list-none text-gray-400'>
+                    {job.responsibilities.map((responsibility, i) => (
+                      <li key={i}>{responsibility}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
               <div className='bg-gray-700 p-6 rounded-lg shadow-md flex flex-col'>
                 <h3 className='text-2xl font-semibold mb-2 text-gray-100'>
                   Want to hire me?
