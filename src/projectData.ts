@@ -11,11 +11,10 @@ export interface Project {
 }
 
 const projects: Project[] = [
-
   {
     title: 'Deshly',
     description:
-      'Deshly is a blogging platform where people can share their thoughts and ideas with the world.',
+      'Deshly is an e-commerce platform for selling Excel templates and other digital resources.',
     screenshots: [],
     liveDemo: 'https://deshly-staging.thatanjan.com/',
     sourceCode: '',
