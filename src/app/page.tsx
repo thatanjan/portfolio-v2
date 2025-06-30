@@ -9,6 +9,11 @@ const Page = () => {
   const youtubeVideos = [
     {
       title:
+        'How to add Google OAuth in Nextjs with Supabase | Server Component | Server Action | Google Login',
+      videoId: 'XgqCh2FwNVY',
+    },
+    {
+      title:
         'Translate website content using Next.js internationalization and next-i18next',
       videoId: 'H9O9HdKNytc',
     },
