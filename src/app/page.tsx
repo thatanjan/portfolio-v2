@@ -161,7 +161,7 @@ const Page = () => {
                     Hire me
                   </a>
                   <a
-                    href='https://drive.google.com/file/d/1i7_4pUGFKfhDTlIs5UQoZhQcZ6LatRvd/view?usp=sharing'
+                    href={process.env.NEXT_PUBLIC_RESUME_URL || '#'}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='border border-gray-400 text-gray-100 px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300'
